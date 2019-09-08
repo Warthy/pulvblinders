@@ -6,7 +6,7 @@ export default class SocialNetworksScreen extends React.Component {
     render() {
         return (
             <WebView
-                source={{uri: 'https://www.instagram.com/pulvblinders'}}
+                source={{uri: 'https://www.instagram.com/pulv_blinders/'}}
                 style={{}}
             />
         );
