@@ -28,7 +28,8 @@ const styles = StyleSheet.create({
         fontSize: 25,
         textTransform: 'uppercase',
         letterSpacing: 1,
-        marginBottom: 10
+        marginBottom: 10,
+        color: "#ffffff"
     },
     memberViewer: {
         flex: 1,
@@ -39,7 +40,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
-        backgroundColor: "#E6E6E6"
+        backgroundColor: "#000000"
     },
 });
 

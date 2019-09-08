@@ -16,7 +16,7 @@ export default function Event(props) {
         <View style={{...styles.member, ...{opacity: moment(date).hours(hours).minutes(minutes).isAfter() ? 1 : 0.4}}}>
             <Modal animationType="fade" visible={modalVisible} style={styles.modal}>
                 <ScrollView>
-                    <TouchableOpacity style={{flex: 1, flexDirection: 'row-reverse'}}>
+                    <TouchableOpacity onPress={() => toggleModal(!modalVisible)} style={{flex: 1, flexDirection: 'row-reverse', margin: 5}}>
                         <MaterialIcons name="close" size={20} color={Colors.second}/>
                     </TouchableOpacity>
                     <Text style={styles.modalTitle}>{title.toUpperCase()}</Text>
@@ -62,6 +62,9 @@ export default function Event(props) {
 }
 
 const styles = StyleSheet.create({
+    modal: {
+      backgroundColor: "#999"
+    },
     member: {
         height: 125,
         flex: 1,

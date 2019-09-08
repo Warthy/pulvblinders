@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         paddingTop: 15,
-        backgroundColor: '#fff',
+        backgroundColor: '#000',
     },
     dateEvents: {
         width: '100%',
@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
     dayName: {
         lineHeight: 30,
         fontSize: 15,
-        color: "#444",
+        color: "#fff",
         fontWeight: 'bold',
         textAlign: 'center',
 

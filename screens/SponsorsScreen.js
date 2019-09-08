@@ -44,7 +44,7 @@ export default class SponsorsScreen extends React.Component {
 
     render() {
         return (
-            <ScrollView>
+            <ScrollView style={{ backgroundColor: '#000'}}>
                 <View style={styles.container}>
                     {this.state.sponsors.map((sponsor, index) => {
                         const style = (index + 1) === 1 || (index + 1) % 3 ?
@@ -66,6 +66,5 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         flexWrap: 'wrap',
         paddingTop: 15,
-        backgroundColor: '#fff',
     },
 });

@@ -1,38 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
     Image, StyleSheet,
-    View, Text,
-    TouchableOpacity,
-    Platform,
+    View, Platform,
 } from 'react-native';
 import Layout from '../constants/Layout';
-import Modal from "./Modal";
 
 
 export default function Member(props) {
-    const [modalVisible, toggleModal] = useState(false);
-    const {name, position, description, images} = props.memberInfo;
+    const {images} = props.memberInfo;
 
     return (
         <View>
-            <Modal modalVisible={modalVisible} onToggle={() => toggleModal(!modalVisible)} style={styles.modal}>
-                <Image
-                    style={Platform.OS === 'ios' ? styles.imageios : styles.imageandroid}
-                    source={images.modal}
-                />
-
-                <Text style={styles.name}>{name}</Text>
-                <Text style={styles.position}>{position.toUpperCase()}</Text>
-
-                <Text style={styles.description}>{description}</Text>
-            </Modal>
-
-            <TouchableOpacity onPress={() => toggleModal(!modalVisible)}>
-                <Image
-                    style={styles.imagePreview}
-                    source={images.preview}
-                />
-            </TouchableOpacity>
+            <Image
+                style={styles.imagePreview}
+                source={images.preview}
+            />
         </View>
     );
 }
@@ -70,10 +52,5 @@ const styles = StyleSheet.create({
         fontWeight: '300',
         fontFamily: Platform.OS === 'android' ? 'sans-serif-light' : undefined,
         fontSize: 18,
-    },
-    description: {
-        textAlign: 'center',
-        marginTop: 10,
-        fontSize: 12
     }
 });
