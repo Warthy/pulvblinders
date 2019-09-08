@@ -9,5 +9,6 @@ export default {
         },
         posts: domain+'/api/post',
         sponsors: domain+'/api/sponsor',
+        phone: domain+'/api/phone'
     }
 };
