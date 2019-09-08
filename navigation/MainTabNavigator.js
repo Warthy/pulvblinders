@@ -1,78 +1,203 @@
 import React from 'react';
-import { Platform } from 'react-native';
-import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
+import {Image, Platform} from 'react-native';
+import {createStackNavigator, createMaterialTopTabNavigator} from 'react-navigation';
+
+import Colors from "../constants/Colors";
 
 import TabBarIcon from '../components/TabBarIcon';
+import HeaderBack from '../components/HeaderBack';
+
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import TeamScreen from "../screens/TeamScreen";
+import FacebookScreen from "../screens/FacebookScreen";
+import InstagramScreen from "../screens/InstagramScreen"
+import SponsorsScreen from "../screens/SponsorsScreen";
+import EventsAssociationsScreen from "../screens/EventsAssociationsScreen";
+import EventsBDEScreen from "../screens/EventsBDEScreen";
 
-const config = Platform.select({
-  web: { headerMode: 'screen' },
-  default: {},
+const names = {
+    Home: "PULVBLINDERS",
+    Team: "L'équipe",
+    Events: "Evenements",
+    Sponsors: "Sponsor",
+    SocialNetworks: 'Reseaux Sociaux'
+};
+
+const socialNetworkTab = createMaterialTopTabNavigator({
+    Facebook: {
+        screen: FacebookScreen,
+        navigationOptions: {
+            tabBarIcon: ({focused}) => (
+                <TabBarIcon
+                    focused={focused}
+                    name="facebook-square"
+                />
+            )
+        }
+    },
+    Instagram: {
+        screen: InstagramScreen,
+        navigationOptions: {
+            tabBarIcon: ({focused}) => (
+                <TabBarIcon
+                    focused={focused}
+                    name="instagram"
+                />
+            )
+        }
+    }
+},{
+    tabBarOptions: {
+        showIcon: true,
+        showLabel: false,
+        activeTintColor: Colors.tabIconSelected,
+        inactiveTintColor: Colors.tabIconDefault,
+        indicatorStyle: {
+            backgroundColor: Colors.second
+        },
+        style: {
+            backgroundColor: Colors.main
+        }
+    },
 });
 
-const HomeStack = createStackNavigator(
-  {
-    Home: HomeScreen,
-  },
-  config
-);
-
-HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon
-      focused={focused}
-      name={
-        Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
-      }
-    />
-  ),
-};
-
-HomeStack.path = '';
-
-const LinksStack = createStackNavigator(
-  {
-    Links: LinksScreen,
-  },
-  config
-);
-
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'} />
-  ),
-};
-
-LinksStack.path = '';
-
-const SettingsStack = createStackNavigator(
-  {
-    Settings: SettingsScreen,
-  },
-  config
-);
-
-SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'} />
-  ),
-};
-
-SettingsStack.path = '';
-
-const tabNavigator = createBottomTabNavigator({
-  HomeStack,
-  LinksStack,
-  SettingsStack,
+const eventsTab = createMaterialTopTabNavigator({
+    Team: {
+        screen: EventsBDEScreen,
+        navigationOptions: {
+            title: "BDE"
+        }
+    },
+    Projects: {
+        screen: EventsAssociationsScreen,
+        navigationOptions: {
+            title: 'Associations'
+        }
+    }
+},{
+    tabBarOptions: {
+        activeTintColor: Colors.tabIconSelected,
+        inactiveTintColor: Colors.tabIconSelected,
+        indicatorStyle: {
+            backgroundColor: Colors.second
+        },
+        style: {
+            backgroundColor: Colors.main
+        }
+    },
 });
 
-tabNavigator.path = '';
 
-export default tabNavigator;
+const TabNavigator = createMaterialTopTabNavigator({
+    Home: {
+        screen: HomeScreen,
+        navigationOptions: {
+            tabBarIcon: ({focused}) => (
+                <TabBarIcon
+                    focused={focused}
+                    name="home"
+                />
+            )
+        }
+    },
+    Team: {
+        screen: TeamScreen,
+        navigationOptions: {
+            tabBarIcon: ({focused}) => (
+                <TabBarIcon
+                    focused={focused}
+                    name="users"
+                />
+            )
+        }
+    },
+    Events: {
+        screen: eventsTab,
+        navigationOptions: {
+            tabBarIcon: ({focused}) => (
+                <TabBarIcon
+                    focused={focused}
+                    name="calendar-o"
+                />
+            )
+        }
+    },
+    Sponsors: {
+        screen: SponsorsScreen,
+        navigationOptions: {
+            tabBarIcon: ({focused}) => (
+                <TabBarIcon
+                    focused={focused}
+                    name="handshake-o"
+                />
+            )
+        }
+    },
+    SocialNetworks: {
+        screen: socialNetworkTab,
+        navigationOptions: {
+            tabBarIcon: ({focused}) => (
+                <TabBarIcon
+                    focused={focused}
+                    name="share-alt"
+                />
+            )
+        }
+    }
+}, {
+    tabBarOptions: {
+        showIcon: true,
+        showLabel: false,
+        activeTintColor: Colors.tabIconSelected,
+        inactiveTintColor: Colors.tabIconDefault,
+        indicatorStyle: {
+            backgroundColor: Colors.second
+        },
+        style: {
+            backgroundColor: Colors.main
+        }
+    },
+    defaultNavigationOptions: {
+        headerStyle: {
+            backgroundColor: Colors.main,
+            tintColor: Colors.tintColor
+        },
+
+    },
+    navigationOptions: ({navigation}) => {
+        const {routeName} = navigation.state.routes[navigation.state.index];
+        return {
+            headerStyle: Platform.OS === 'ios' ?{
+                backgroundColor: Colors.main,
+                borderBottomColor: Colors.main,
+                shadowColor : Colors.main,
+                shadowOpacity: 0,
+                shadowOffset: {
+                    height: 0,
+                },
+                shadowRadius: 0,
+
+            }: {
+                backgroundColor: Colors.main,
+                borderBottomColor: Colors.main,
+                elevation: 0
+            },
+            headerTintColor: Colors.tintColor,
+            headerTitle: names[routeName],
+            headerTitleStyle: {
+                fontFamily: 'clarendon-condensed',
+                fontWeight: undefined,
+            },
+            headerLeft: routeName === 'Home' ? null :
+                <HeaderBack navigation={navigation} />,
+            headerRight: <Image
+                source={ require('../assets/images/logo.png')}
+                style={{width: 30, height: 30, marginRight:15}}
+            />
+        };
+    }
+});
+
+export default createStackNavigator({
+    TabNavigator: TabNavigator
+})
