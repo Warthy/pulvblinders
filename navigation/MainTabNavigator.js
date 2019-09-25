@@ -1,17 +1,14 @@
 import React from 'react';
 import {Image, Platform} from 'react-native';
 import {createStackNavigator, createMaterialTopTabNavigator} from 'react-navigation';
-
 import Colors from "../constants/Colors";
-
 import TabBarIcon from '../components/TabBarIcon';
 import HeaderBack from '../components/HeaderBack';
-
-import HomeScreen from '../screens/HomeScreen';
+import PostScreen from '../screens/PostScreen';
 import TeamScreen from "../screens/TeamScreen";
 import FacebookScreen from "../screens/FacebookScreen";
 import InstagramScreen from "../screens/InstagramScreen"
-import SponsorsScreen from "../screens/SponsorsScreen";
+import HomeScreen from "../screens/HomeScreen";
 import EventsAssociationsScreen from "../screens/EventsAssociationsScreen";
 import EventsBDEScreen from "../screens/EventsBDEScreen";
 
@@ -122,13 +119,13 @@ const TabNavigator = createMaterialTopTabNavigator({
             )
         }
     },
-    Sponsors: {
-        screen: SponsorsScreen,
+    Post: {
+        screen: PostScreen,
         navigationOptions: {
             tabBarIcon: ({focused}) => (
                 <TabBarIcon
                     focused={focused}
-                    name="handshake-o"
+                    name="edit"
                 />
             )
         }
