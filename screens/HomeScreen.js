@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         flexWrap: 'wrap',
-        backgroundColor: "#fff",
+        backgroundColor: "#000",
         justifyContent: 'center'
     },
     image: {
