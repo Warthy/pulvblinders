@@ -1,43 +1,43 @@
 {
-  "expo": {
-    "name": "PulvBlinders",
-    "slug": "pulvblinders",
-    "privacy": "unlisted",
-    "sdkVersion": "34.0.0",
-    "platforms": [
-      "ios",
-      "android"
-    ],
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "githubUrl": "https://github.com/Warthy/pulvBlinders",
-    "primaryColor": "#000000",
-    "splash": {
-      "image": "./assets/images/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#000000"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "bundleIdentifier": "com.venardpaul.pulvblinders",
-      "supportsTablet": true,
-      "icon": "./assets/images/icon.png"
-    },
-    "android": {
-      "package": "com.venardpaul.pulvblinders",
-      "versionCode": 1,
-      "icon": "./assets/images/icon.png"
-    },
-    "description": "Application du BDE PulvBlinders",
-    "notification": {
-      "icon": "./assets/images/notification.png",
-      "color": "#000000"
+    "expo": {
+        "name": "PulvBlinders",
+        "slug": "pulvblinders",
+        "privacy": "unlisted",
+        "sdkVersion": "34.0.0",
+        "platforms": [
+            "ios",
+            "android"
+        ],
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "icon": "./assets/images/icon.png",
+        "githubUrl": "https://github.com/Warthy/pulvBlinders",
+        "primaryColor": "#000000",
+        "splash": {
+            "image": "./assets/images/splash.png",
+            "resizeMode": "contain",
+            "backgroundColor": "#000000"
+        },
+        "updates": {
+            "fallbackToCacheTimeout": 0
+        },
+        "assetBundlePatterns": [
+            "**/*"
+        ],
+        "ios": {
+            "bundleIdentifier": "com.venardpaul.pulvblindersbde",
+            "supportsTablet": true,
+            "icon": "./assets/images/icon.png"
+        },
+        "android": {
+            "package": "com.venardpaul.pulvblinders",
+            "versionCode": 1,
+            "icon": "./assets/images/icon.png"
+        },
+        "description": "Application du BDE PulvBlinders",
+        "notification": {
+            "icon": "./assets/images/notification.png",
+            "color": "#000000"
+        }
     }
-  }
 }
