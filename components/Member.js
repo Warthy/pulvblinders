@@ -24,22 +24,6 @@ const styles = StyleSheet.create({
     imagePreview: {
         width: (Layout.window.width) / 2
     },
-    imageios: {
-        marginTop: -(Layout.window.width / 2),
-        width: Layout.window.width / 2,
-        height: Layout.window.width / 2,
-        borderRadius: (Layout.window.width / 4),
-        borderWidth: 5,
-        borderColor: '#fff',
-    },
-    imageandroid: {
-        marginTop: -120,
-        width: (Layout.window.width) / 2,
-        height: (Layout.window.width) / 2,
-        borderRadius: (Layout.window.width),
-        borderWidth: 5,
-        borderColor: '#fff',
-    },
     name: {
         textAlign: 'center',
         fontWeight: 'bold',
