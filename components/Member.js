@@ -10,9 +10,9 @@ export default function Member(props) {
     const {images} = props.memberInfo;
 
     return (
-        <View>
+        <View style={styles.imagePreview}>
             <Image
-                style={styles.imagePreview}
+                resizeMode={"contain"}
                 source={images.preview}
             />
         </View>
