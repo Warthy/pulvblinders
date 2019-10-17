@@ -108,17 +108,6 @@ const TabNavigator = createMaterialTopTabNavigator({
             )
         }
     },
-    Events: {
-        screen: eventsTab,
-        navigationOptions: {
-            tabBarIcon: ({focused}) => (
-                <TabBarIcon
-                    focused={focused}
-                    name="calendar-o"
-                />
-            )
-        }
-    },
     Post: {
         screen: PostScreen,
         navigationOptions: {
@@ -126,6 +115,17 @@ const TabNavigator = createMaterialTopTabNavigator({
                 <TabBarIcon
                     focused={focused}
                     name="edit"
+                />
+            )
+        }
+    },
+    Events: {
+        screen: eventsTab,
+        navigationOptions: {
+            tabBarIcon: ({focused}) => (
+                <TabBarIcon
+                    focused={focused}
+                    name="calendar-o"
                 />
             )
         }
