@@ -4,52 +4,69 @@ export default [
         members: [
             {
                 name: "Charles Raingeva",
-                position: "Président",
                 images: {
-                    preview: require('../assets/images/members/Charles.png'),
-                    modal: require('../assets/images/members/modal/charles.jpg')
+                    preview: require('../assets/images/members/Charles.png')
                 },
             }, {
                 name: "Salomé Frossard",
-                position: "Vice-Présidente",
                 images: {
-                    preview: require('../assets/images/members/Salome.png'),
-                    modal: require('../assets/images/members/modal/salome.jpg')
+                    preview: require('../assets/images/members/Salome.png')
                 },
             }, {
                 name: "Mathias Pfeiffer",
-                position: "Vice-Président",
                 images: {
-                    preview: require('../assets/images/members/Mathias.png'),
-                    modal: require('../assets/images/members/modal/mathias.jpg')
+                    preview: require('../assets/images/members/Mathias.png')
                 },
             }, {
                 name: "David Manscour",
-                position: "Secrétaire Général",
                 images: {
-                    preview: require('../assets/images/members/David.png'),
-                    modal: require('../assets/images/members/modal/david.jpg')
+                    preview: require('../assets/images/members/David.png')
                 },
             }, {
                 name: "Ines Bouinière",
-                position: "Vice Secrétaire",
                 images: {
-                    preview: require('../assets/images/members/InesBouinere.png'),
-                    modal: require('../assets/images/members/modal/ines_b.jpg')
+                    preview: require('../assets/images/members/InesBouinere.png')
                 },
             }, {
                 name: "Alexandre Grenier",
-                position: "Trésorier",
                 images: {
-                    preview: require('../assets/images/members/AlexandreGrenier.png'),
-                    modal: require('../assets/images/members/modal/alexandre_grenier.jpg')
+                    preview: require('../assets/images/members/AlexandreGrenier.png')
                 },
             }, {
                 name: "Cassiopée Comar",
-                position: "Vice-Trésorière",
                 images: {
-                    preview: require('../assets/images/members/Cassiopee.png'),
-                    modal: require('../assets/images/members/modal/cassiopee.jpg')
+                    preview: require('../assets/images/members/Cassiopee.png')
+                },
+            }, {
+                name: "Mathias Oracle",
+                images: {
+                    preview: require('../assets/images/members/Cassiopee.png')
+                },
+            },
+        ]
+    },
+    {
+        name: "Pôle staff",
+        members: [
+            {
+                name: "Paul",
+                images: {
+                    preview: require('../assets/images/members/BenjaminGuigon.png')
+                },
+            }, {
+                name: "Tom",
+                images: {
+                    preview: require('../assets/images/members/BenjaminGuigon.png')
+                },
+            }, {
+                name: "Thibault",
+                images: {
+                    preview: require('../assets/images/members/BenjaminGuigon.png')
+                },
+            }, {
+                name: "Arthur",
+                images: {
+                    preview: require('../assets/images/members/BenjaminGuigon.png')
                 },
             },
         ]
@@ -59,31 +76,23 @@ export default [
         members: [
             {
                 name: "Benjamin Guigon",
-                position: "Membre d'honneur",
                 images: {
-                    preview: require('../assets/images/members/BenjaminGuigon.png'),
-                    modal: require('../assets/images/members/modal/benjamin.jpg')
+                    preview: require('../assets/images/members/BenjaminGuigon.png')
                 },
             }, {
                 name: "Antoine Galabert",
-                position: "Membre d'honneur",
                 images: {
-                    preview: require('../assets/images/members/AntoineGalabert.png'),
-                    modal: require('../assets/images/members/modal/antoine_galabert.jpg')
+                    preview: require('../assets/images/members/AntoineGalabert.png')
                 },
             }, {
                 name: "Antoine Gueranger",
-                position: "Membre d'honneur",
                 images: {
-                    preview: require('../assets/images/members/AntoineGueranger.png'),
-                    modal: require('../assets/images/members/modal/antoine_gueranger.jpg')
+                    preview: require('../assets/images/members/AntoineGueranger.png')
                 },
             }, {
                 name: "Mahamadou Diakite",
-                position: "Membre d'honneur",
                 images: {
-                    preview: require('../assets/images/members/Mamhadou.png'),
-                    modal: require('../assets/images/members/modal/mamad.jpg')
+                    preview: require('../assets/images/members/Mamhadou.png')
                 },
             }
         ]
@@ -93,45 +102,48 @@ export default [
         members: [
             {
                 name: "Romain Mourad",
-                position: "Co-Responsable Pôle Journée",
                 images: {
-                    preview: require('../assets/images/members/RomainMourad.png'),
-                    modal: require('../assets/images/members/modal/romain.jpg')
+                    preview: require('../assets/images/members/RomainMourad.png')
                 },
             }, {
                 name: "Melvin Pélage",
-                position: "Co-Responsable Pôle Journée",
                 images: {
-                    preview: require('../assets/images/members/Melvin.png'),
-                    modal: require('../assets/images/members/modal/melvin.jpg')
+                    preview: require('../assets/images/members/Melvin.png')
                 },
             }, {
                 name: "Sonia Le Cheviller",
-                position: "Pôle Journée",
                 images: {
-                    preview: require('../assets/images/members/Sonia.png'),
-                    modal: require('../assets/images/members/modal/sonia.jpg')
+                    preview: require('../assets/images/members/Sonia.png')
                 },
             }, {
                 name: "Valentine Dupart",
-                position: "Pôle Journée",
-               images: {
-                    preview: require('../assets/images/members/Valentine.png'),
-                    modal: require('../assets/images/members/modal/valentine.jpg')
+                images: {
+                    preview: require('../assets/images/members/Valentine.png')
                 },
             }, {
                 name: "Jean-Philippe Maillard",
-                position: "Pôle Journée",
                 images: {
-                    preview: require('../assets/images/members/JeanPhillipe.png'),
-                    modal: require('../assets/images/members/modal/jp.jpg')
+                    preview: require('../assets/images/members/JeanPhillipe.png')
                 },
             }, {
                 name: "Alice",
-                position: "Pôle Journée",
                 images: {
-                    preview: require('../assets/images/members/Alice.png'),
-                    modal: require('../assets/images/members/modal/alice.jpg')
+                    preview: require('../assets/images/members/Alice.png')
+                },
+            }, {
+                name: "Charlène",
+                images: {
+                    preview: require('../assets/images/members/Alice.png')
+                },
+            }, {
+                name: "Salomé",
+                images: {
+                    preview: require('../assets/images/members/Alice.png')
+                },
+            }, {
+                name: "Artus",
+                images: {
+                    preview: require('../assets/images/members/Alice.png')
                 },
             }
         ]
@@ -141,38 +153,58 @@ export default [
         members: [
             {
                 name: "Alexis Kabiche",
-                position: "Responsable Pôle Communication",
                 images: {
-                    preview: require('../assets/images/members/AlexisKabiche.png'),
-                    modal: require('../assets/images/members/modal/alexis.jpg')
+                    preview: require('../assets/images/members/AlexisKabiche.png')
                 },
             }, {
                 name: "Nicolas Esteves",
-                position: "Responsable Pôle Communication",
                 images: {
-                    preview: require('../assets/images/members/NicolasEsteves.png'),
-                    modal: require('../assets/images/members/modal/nicolas.jpg')
+                    preview: require('../assets/images/members/NicolasEsteves.png')
                 },
             }, {
                 name: "Agathe Orlandini",
-                position: "Pôle Communication",
                 images: {
-                    preview: require('../assets/images/members/Agathe.png'),
-                    modal: require('../assets/images/members/modal/agathe.jpg')
+                    preview: require('../assets/images/members/Agathe.png')
                 },
             }, {
                 name: "Sam Pinto",
-                position: "Pôle Communication",
                 images: {
-                    preview: require('../assets/images/members/Sam.png'),
-                    modal: require('../assets/images/members/modal/sam.jpg')
+                    preview: require('../assets/images/members/Sam.png')
+                },
+            }, {
+                name: "Mélanie",
+                images: {
+                    preview: require('../assets/images/members/Sam.png')
+                },
+            }, {
+                name: "Pauline",
+                images: {
+                    preview: require('../assets/images/members/Sam.png')
+                },
+            }, {
+                name: "Tony",
+                images: {
+                    preview: require('../assets/images/members/Sam.png')
+                },
+            }, {
+                name: "Paul",
+                images: {
+                    preview: require('../assets/images/members/Sam.png')
+                },
+            }, {
+                name: "Axel",
+                images: {
+                    preview: require('../assets/images/members/Sam.png')
+                },
+            }, {
+                name: "Benjamin",
+                images: {
+                    preview: require('../assets/images/members/Sam.png')
                 },
             }, {
                 name: "Fabrine Grassion",
-                position: "Community Manager",
                 images: {
-                    preview: require('../assets/images/members/Fabrine.png'),
-                    modal: require('../assets/images/members/modal/fabrine.jpg')
+                    preview: require('../assets/images/members/Fabrine.png')
                 },
             }
         ]
@@ -182,32 +214,38 @@ export default [
         members: [
             {
                 name: "Léonor Malotaux",
-                position: "Responsable soirée",
                 images: {
-                    preview: require('../assets/images/members/Leonor.png'),
-                    modal: require('../assets/images/members/modal/leonor.jpg')
+                    preview: require('../assets/images/members/Leonor.png')
                 },
-            },  {
+            }, {
                 name: "Pierre Humbaire",
-                position: "Pôle Soirée",
-                description: "Fraîchement descendu de sa montagne où il règne en maître depuis des années, il se lance dans un nouveau challenge. Prêt à tout brûler avec le BDE en troquant son bonnet par un béret, le PIOUPIOU organisera des soirées encore jamais vues au pôle. Bien encadré par un pôle soirée on fire, son expérience durement acquise ces dernières années à travers de multiples apéros, souvent ravageurs, saura être utilisée à bonne escient. Désormais canardisé par une jeune femme du nord, il pourra encadrer sérieusement les événements monumentaux qui arrivent. Le vice président de LéoSlide n’est pas là pour enfiler des perles, il arrive pour faire du bruit.",
                 images: {
-                    preview: require('../assets/images/members/Pierre.png'),
-                    modal: require('../assets/images/members/modal/pierre.jpg')
+                    preview: require('../assets/images/members/Pierre.png')
                 },
-            },  {
+            }, {
                 name: "Inès Cartalas",
-                position: "Pôle Soirée",
                 images: {
-                    preview: require('../assets/images/members/InesCartalas.png'),
-                    modal: require('../assets/images/members/modal/ines.jpg')
+                    preview: require('../assets/images/members/InesCartalas.png')
                 },
-            },  {
+            }, {
                 name: "Helder Goncalves",
-                position: "Pôle Soirée",
                 images: {
-                    preview: require('../assets/images/members/Helder.png'),
-                    modal: require('../assets/images/members/modal/helder.jpg')
+                    preview: require('../assets/images/members/Helder.png')
+                },
+            }, {
+                name: "François Goncalves",
+                images: {
+                    preview: require('../assets/images/members/Helder.png')
+                },
+            }, {
+                name: "Lena Goncalves",
+                images: {
+                    preview: require('../assets/images/members/Helder.png')
+                },
+            }, {
+                name: "Thomas Goncalves",
+                images: {
+                    preview: require('../assets/images/members/Helder.png')
                 },
             }
         ]
@@ -217,17 +255,18 @@ export default [
         members: [
             {
                 name: "Marie Fontaine",
-                position: "Responsable Pôle Partenariat",
                 images: {
-                    preview: require('../assets/images/members/MarieFontaine.png'),
-                    modal: require('../assets/images/members/modal/marie.jpg')
+                    preview: require('../assets/images/members/MarieFontaine.png')
                 },
             }, {
-                name: "Thibault Mayet Leroux\n",
-                position: "Pôle Partenariat",
+                name: "Thibault Mayet Leroux",
                 images: {
-                    preview: require('../assets/images/members/Thibault.png'),
-                    modal: require('../assets/images/members/modal/thibault.jpg')
+                    preview: require('../assets/images/members/Thibault.png')
+                },
+            }, {
+                name: "Gabriel",
+                images: {
+                    preview: require('../assets/images/members/Thibault.png')
                 },
             }
         ]

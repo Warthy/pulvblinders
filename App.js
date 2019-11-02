@@ -32,6 +32,7 @@ async function loadResourcesAsync() {
   await Promise.all([
     Asset.loadAsync([
       require('./assets/images/logo.png'),
+      require('./assets/images/loading.gif'),
     ]),
     Font.loadAsync({
       'clarendon-condensed': require('./assets/fonts/ClarendonCondensed.ttf')

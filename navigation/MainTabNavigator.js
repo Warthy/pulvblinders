@@ -8,7 +8,7 @@ import PostScreen from '../screens/PostScreen';
 import TeamScreen from "../screens/TeamScreen";
 import FacebookScreen from "../screens/FacebookScreen";
 import InstagramScreen from "../screens/InstagramScreen"
-import HomeScreen from "../screens/HomeScreen";
+import SponsorScreen from "../screens/SponsorScreen";
 import EventsAssociationsScreen from "../screens/EventsAssociationsScreen";
 import EventsBDEScreen from "../screens/EventsBDEScreen";
 
@@ -87,7 +87,7 @@ const eventsTab = createMaterialTopTabNavigator({
 
 const TabNavigator = createMaterialTopTabNavigator({
     Home: {
-        screen: HomeScreen,
+        screen: PostScreen,
         navigationOptions: {
             tabBarIcon: ({focused}) => (
                 <TabBarIcon
@@ -108,6 +108,17 @@ const TabNavigator = createMaterialTopTabNavigator({
             )
         }
     },
+    Sponsors: {
+        screen: SponsorScreen,
+        navigationOptions: {
+            tabBarIcon: ({focused}) => (
+                <TabBarIcon
+                    focused={focused}
+                    name="gift"
+                />
+            )
+        }
+    },
     Events: {
         screen: eventsTab,
         navigationOptions: {
@@ -115,17 +126,6 @@ const TabNavigator = createMaterialTopTabNavigator({
                 <TabBarIcon
                     focused={focused}
                     name="calendar-o"
-                />
-            )
-        }
-    },
-    Post: {
-        screen: PostScreen,
-        navigationOptions: {
-            tabBarIcon: ({focused}) => (
-                <TabBarIcon
-                    focused={focused}
-                    name="edit"
                 />
             )
         }
@@ -185,12 +185,11 @@ const TabNavigator = createMaterialTopTabNavigator({
                 fontFamily: 'clarendon-condensed',
                 fontWeight: undefined,
             },
-            headerLeft: routeName === 'Home' ? null :
-                <HeaderBack navigation={navigation} />,
-            headerRight: <Image
-                source={ require('../assets/images/logo.png')}
-                style={{width: 30, height: 30, marginRight:15}}
-            />
+            headerLeft: routeName === 'Home' ? null : <HeaderBack navigation={navigation} />,
+            // headerRight: <Image
+            //     source={ require('../assets/images/logo.png')}
+            //     style={{width: 30, height: 30, marginRight:15}}
+            // />
         };
     }
 });
