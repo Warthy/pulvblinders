@@ -48,7 +48,7 @@ export default function Articles(props) {
                 }}
             >
                 <Text style={{marginBottom: 10}}>
-                    {content}
+                    {content || 'Read More..'}
                 </Text>
                 <Divider style={{backgroundColor: '#dfe6e9'}}/>
                 <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
