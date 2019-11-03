@@ -51,7 +51,7 @@ export default [
             {
                 name: "Paul",
                 images: {
-                    preview: require('../assets/images/members/PaulRespoStaff.png.png')
+                    preview: require('../assets/images/members/PaulRespoStaff.png')
                 },
             }, {
                 name: "Tom",
