@@ -40,7 +40,7 @@ export default [
             }, {
                 name: "Mathias Oracle",
                 images: {
-                    preview: require('../assets/images/members/Cassiopee.png')
+                    preview: require('../assets/images/members/MathiasPereFamille.png')
                 },
             },
         ]
@@ -51,22 +51,22 @@ export default [
             {
                 name: "Paul",
                 images: {
-                    preview: require('../assets/images/members/BenjaminGuigon.png')
+                    preview: require('../assets/images/members/PaulRespoStaff.png.png')
                 },
             }, {
                 name: "Tom",
                 images: {
-                    preview: require('../assets/images/members/BenjaminGuigon.png')
+                    preview: require('../assets/images/members/Tom.png')
                 },
             }, {
                 name: "Thibault",
                 images: {
-                    preview: require('../assets/images/members/BenjaminGuigon.png')
+                    preview: require('../assets/images/members/ThibaultBookie.png')
                 },
             }, {
                 name: "Arthur",
                 images: {
-                    preview: require('../assets/images/members/BenjaminGuigon.png')
+                    preview: require('../assets/images/members/Arthur.png')
                 },
             },
         ]
@@ -133,17 +133,17 @@ export default [
             }, {
                 name: "Charlène",
                 images: {
-                    preview: require('../assets/images/members/Alice.png')
+                    preview: require('../assets/images/members/Charlene.png')
                 },
             }, {
                 name: "Salomé",
                 images: {
-                    preview: require('../assets/images/members/Alice.png')
+                    preview: require('../assets/images/members/SalomeContrebandier.png')
                 },
             }, {
                 name: "Artus",
                 images: {
-                    preview: require('../assets/images/members/Alice.png')
+                    preview: require('../assets/images/members/Arthus.png')
                 },
             }
         ]
@@ -174,32 +174,32 @@ export default [
             }, {
                 name: "Mélanie",
                 images: {
-                    preview: require('../assets/images/members/Sam.png')
+                    preview: require('../assets/images/members/Melanie.png')
                 },
             }, {
                 name: "Pauline",
                 images: {
-                    preview: require('../assets/images/members/Sam.png')
+                    preview: require('../assets/images/members/Pauline.png')
                 },
             }, {
                 name: "Tony",
                 images: {
-                    preview: require('../assets/images/members/Sam.png')
+                    preview: require('../assets/images/members/Tony.png')
                 },
             }, {
                 name: "Paul",
                 images: {
-                    preview: require('../assets/images/members/Sam.png')
+                    preview: require('../assets/images/members/PaulJournaliste.png')
                 },
             }, {
                 name: "Axel",
                 images: {
-                    preview: require('../assets/images/members/Sam.png')
+                    preview: require('../assets/images/members/Axel.png')
                 },
             }, {
                 name: "Benjamin",
                 images: {
-                    preview: require('../assets/images/members/Sam.png')
+                    preview: require('../assets/images/members/Benjamin.png')
                 },
             }, {
                 name: "Fabrine Grassion",
@@ -235,17 +235,17 @@ export default [
             }, {
                 name: "François Goncalves",
                 images: {
-                    preview: require('../assets/images/members/Helder.png')
+                    preview: require('../assets/images/members/Francois.png')
                 },
             }, {
                 name: "Lena Goncalves",
                 images: {
-                    preview: require('../assets/images/members/Helder.png')
+                    preview: require('../assets/images/members/Lena.png')
                 },
             }, {
                 name: "Thomas Goncalves",
                 images: {
-                    preview: require('../assets/images/members/Helder.png')
+                    preview: require('../assets/images/members/Thomas.png')
                 },
             }
         ]
@@ -266,7 +266,7 @@ export default [
             }, {
                 name: "Gabriel",
                 images: {
-                    preview: require('../assets/images/members/Thibault.png')
+                    preview: require('../assets/images/members/Gab.png')
                 },
             }
         ]
