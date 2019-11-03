@@ -37,12 +37,7 @@ export default [
                 images: {
                     preview: require('../assets/images/members/Cassiopee.png')
                 },
-            }, {
-                name: "Mathias Oracle",
-                images: {
-                    preview: require('../assets/images/members/MathiasPereFamille.png')
-                },
-            },
+            }
         ]
     },
     {
@@ -267,6 +262,11 @@ export default [
                 name: "Gabriel",
                 images: {
                     preview: require('../assets/images/members/Gab.png')
+                },
+            }, {
+                name: "Paul",
+                images: {
+                    preview: require('../assets/images/members/PaulPartenriat.png')
                 },
             }
         ]

@@ -87,7 +87,7 @@ const eventsTab = createMaterialTopTabNavigator({
 
 const TabNavigator = createMaterialTopTabNavigator({
     Home: {
-        screen: PostScreen,
+        screen: SponsorScreen,
         navigationOptions: {
             tabBarIcon: ({focused}) => (
                 <TabBarIcon
@@ -108,13 +108,13 @@ const TabNavigator = createMaterialTopTabNavigator({
             )
         }
     },
-    Sponsors: {
-        screen: SponsorScreen,
+    Post: {
+        screen: PostScreen,
         navigationOptions: {
             tabBarIcon: ({focused}) => (
                 <TabBarIcon
                     focused={focused}
-                    name="gift"
+                    name="newspaper-o"
                 />
             )
         }

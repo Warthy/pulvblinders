@@ -15,9 +15,10 @@ export default function Event(props) {
     return (
         <View style={{...styles.member, ...{opacity: moment(date).hours(hours).minutes(minutes).isAfter() ? 1 : 0.4}}}>
             <Modal animationType="fade" visible={modalVisible} style={styles.modal}>
-                <ScrollView>
-                    <TouchableOpacity onPress={() => toggleModal(!modalVisible)} style={{flex: 1, flexDirection: 'row-reverse', margin: 5}}>
-                        <MaterialIcons name="close" size={20} color={Colors.second}/>
+                <ScrollView style={{flex: 9, backgroundColor: "#444"}}>
+                    <TouchableOpacity onPress={() => toggleModal(!modalVisible)}
+                                      style={{flex: 1, flexDirection: 'row-reverse', margin: 5}}>
+                        <MaterialIcons name="close" size={20} color={Colors.tintColor}/>
                     </TouchableOpacity>
                     <Text style={styles.modalTitle}>{title.toUpperCase()}</Text>
                     <Text style={styles.modalLocation}>{location}</Text>
@@ -25,7 +26,7 @@ export default function Event(props) {
 
                     <View style={{marginTop: 40, alignSelf: 'stretch'}}>
                         <Text style={styles.modalSection}> Description : </Text>
-                        <Text style={{textAlign: 'center'}}>{description}</Text>
+                        <Text style={{textAlign: 'center', color: "#fff"}}>{description}</Text>
                     </View>
 
                     <View style={{marginTop: 20, alignSelf: 'stretch'}}>
@@ -34,11 +35,12 @@ export default function Event(props) {
                             {dateFormat} - {endsAt ? startsAt + ' - ' + endsAt : startsAt}
                         </Text>
                     </View>
-
+                </ScrollView>
+                <View style={{flex: 1, backgroundColor: "#444"}}>
                     <TouchableOpacity onPress={() => toggleModal(!modalVisible)} style={styles.closeButton}>
                         <Text style={styles.close}>Retour</Text>
                     </TouchableOpacity>
-                </ScrollView>
+                </View>
             </Modal>
 
             <TouchableOpacity onPress={() => toggleModal(!modalVisible)}>
@@ -63,7 +65,8 @@ export default function Event(props) {
 
 const styles = StyleSheet.create({
     modal: {
-      backgroundColor: "#999"
+        backgroundColor: "#fff",
+        justifyContent: "space-between"
     },
     member: {
         height: 125,
@@ -109,7 +112,7 @@ const styles = StyleSheet.create({
     },
     modalTitle: {
         marginVertical: 10,
-        color: "#444",
+        color: "#fff",
         textAlign: 'center',
         fontFamily: 'clarendon-condensed',
         fontSize: 20,
@@ -117,30 +120,30 @@ const styles = StyleSheet.create({
     modalSection: {
         textAlign: 'left',
         fontSize: 15,
-        color: "#444",
+        color: "#fff",
         fontWeight: 'bold',
     },
     modalDate: {
         textAlign: 'center',
         fontSize: 15,
-        color: "#444",
+        color: "#fff",
     },
     modalLocation: {
         marginTop: -13,
-        color: "#444",
+        color: "#fff",
         textAlign: 'center',
         fontSize: 15,
         fontWeight: 'bold',
     },
     closeButton: {
-        marginTop: 10,
+        marginVertical: 20,
         flex: 1,
         minHeight: 30,
         justifyContent: 'flex-end',
     },
     close: {
         textAlign: 'center',
-        color: Colors.second,
+        color: '#fff',
         textTransform: 'uppercase',
         fontWeight: 'bold',
         fontFamily: Platform.OS === 'android' ? 'sans-serif-light' : undefined,
