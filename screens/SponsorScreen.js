@@ -1,11 +1,16 @@
 import React from 'react';
-import {Image, ScrollView, StyleSheet, TouchableOpacity, View} from 'react-native';
+import {
+    ActivityIndicator,
+    Image,
+    ScrollView,
+    StyleSheet,
+    TouchableOpacity,
+    View
+} from 'react-native';
 import axios from "axios";
 import API from '../constants/API';
 import * as WebBrowser from "expo-web-browser";
 import Layout from "../constants/Layout";
-import {Notifications} from "expo";
-
 
 
 export default class SponsorScreen extends React.Component {
@@ -32,8 +37,11 @@ export default class SponsorScreen extends React.Component {
                 const sponsors = res.data;
                 this.setState({
                     sponsors: sponsors || [],
+                    imagesLoaded: Array(sponsors.length).fill(false),
                     isLoading: false,
+                    time: Date.now()
                 });
+
             })
             .catch(e => {
                 console.log(e);
@@ -44,24 +52,30 @@ export default class SponsorScreen extends React.Component {
             });
     }
 
+    _onLoad = (index) => {
+        const {imagesLoaded} = this.state;
+        imagesLoaded[index] = true;
+        this.setState(() => ({imagesLoaded: imagesLoaded}))
+    };
+
+
     render() {
-        let sponsors = this.state.sponsors;
+        const {sponsors, imagesLoaded, time} = this.state;
         return (
-            <ScrollView>
+            <ScrollView style={{backgroundColor: "#000"}}>
                 <View style={styles.container}>
-
-                {sponsors.map((sponsor, index) => (
-                    <View key={index}>
-                        <TouchableOpacity onPress={() => _handleOpenWithWebBrowser(sponsor.url)}>
-                            <Image
-                                style={styles.image}
-                                source={{uri: API.media + sponsor.media}}
-                                defaultSource={require('../assets/images/loading.gif')}
-                            />
-                        </TouchableOpacity>
-                    </View>
-                ))}
-
+                    {sponsors.map((sponsor, index) => (
+                        <View style={styles.imageView} key={index}>
+                            <TouchableOpacity style={{flex: 1, justifyContent: 'center',}}  onPress={() => _handleOpenWithWebBrowser(sponsor.url)}>
+                                <Image
+                                    style={{flex: 1}}
+                                    source={{uri: API.media + sponsor.media}}
+                                    onLoad={() => this._onLoad(index)}
+                                />
+                                {!imagesLoaded[index] && time+ 800 < Date.now() && <ActivityIndicator size="large" color={"#c6c6c6"}/>}
+                            </TouchableOpacity>
+                        </View>
+                    ))}
                 </View>
             </ScrollView>
         );
@@ -82,11 +96,11 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         flexWrap: 'wrap',
-        backgroundColor: "#fff",
+        backgroundColor: "#000",
         justifyContent: 'center'
     },
-    image: {
-        width: (Layout.window.width) / 2 ,
+    imageView: {
+        width: (Layout.window.width) / 2,
         minHeight: 300
     }
 });

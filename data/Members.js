@@ -111,11 +111,6 @@ export default [
                     preview: require('../assets/images/members/Sonia.png')
                 },
             }, {
-                name: "Valentine Dupart",
-                images: {
-                    preview: require('../assets/images/members/Valentine.png')
-                },
-            }, {
                 name: "Jean-Philippe Maillard",
                 images: {
                     preview: require('../assets/images/members/JeanPhillipe.png')
@@ -155,16 +150,6 @@ export default [
                 name: "Nicolas Esteves",
                 images: {
                     preview: require('../assets/images/members/NicolasEsteves.png')
-                },
-            }, {
-                name: "Agathe Orlandini",
-                images: {
-                    preview: require('../assets/images/members/Agathe.png')
-                },
-            }, {
-                name: "Sam Pinto",
-                images: {
-                    preview: require('../assets/images/members/Sam.png')
                 },
             }, {
                 name: "Mélanie",
@@ -211,11 +196,6 @@ export default [
                 name: "Léonor Malotaux",
                 images: {
                     preview: require('../assets/images/members/Leonor.png')
-                },
-            }, {
-                name: "Pierre Humbaire",
-                images: {
-                    preview: require('../assets/images/members/Pierre.png')
                 },
             }, {
                 name: "Inès Cartalas",

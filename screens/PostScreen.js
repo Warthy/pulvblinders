@@ -8,7 +8,6 @@ import Articles from '../components/Articles';
 import axios from 'axios';
 import API from '../constants/API';
 import * as Permissions from "expo-permissions";
-
 async function registerForPushNotificationsAsync() {
     const { status: existingStatus } = await Permissions.getAsync(
         Permissions.NOTIFICATIONS
